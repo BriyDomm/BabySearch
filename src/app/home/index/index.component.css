@@ -1,0 +1,41 @@
+.my-button {
+    background-color: #D5093E;
+    border-radius: 5;
+    color: white;
+    font-family: FontAwesome;
+    font-size: 24;
+    vertical-align: middle;
+    width: 95%;
+    height: 100px;
+}
+.my-button:active {
+    background-color: lightslategray;
+    color:white;
+}
+.imgheaderown {
+    height: 70;
+    width: 70;
+}
+.imgheader {
+    height: 60;
+    width: 60;
+}
+.shisown {
+    border-bottom-width: 2;
+    border-bottom-color: white;
+}
+.followreq-image {
+    color: #dfdfdf;
+    height: 60;
+    width: 60;
+    font-size: 60;
+    padding: 0;
+    margin-bottom: 5;
+    margin-top: 20;
+}
+.tabselected {
+    color: #ff4b60;
+}
+.tabnotselected {
+    color: black;
+}

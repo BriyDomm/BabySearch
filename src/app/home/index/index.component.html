@@ -1,0 +1,67 @@
+<ActionBar class="action-bar" style="background-color:#D5093E">
+    <Image src="~/images/bslogo.png"></Image>
+</ActionBar>
+
+<ScrollView marginTop="10">
+    <StackLayout>
+        <Image
+                src = "~/images/find-me.png"
+                class="rounded-circle"
+                borderRadius="10%"
+                (tap) = "findMe()"
+                margin = "8">
+        </Image>
+        <GridLayout
+                *ngFor="let profile of profiles"
+                rows="100, 200"
+                columns="*">
+            <GridLayout
+                    row="0"
+                    col="0"
+                    class="m-20"
+                    rows="50"
+                    columns="60, auto, *">
+                <Image
+                        row="0"
+                        col="0" [src]="profile.imageProfile"
+                        class="rounded-circle"
+                        borderRadius="100%"
+                        verticalAlignment="center"
+                        horizontalAlignment="left"
+                        stretch="aspectFill"
+                        style="width: 70px; height: 70px;">
+                </Image>
+                <Label
+                        row="0"
+                        col="1"
+                        [text] = "profile.username"
+                        verticalalignment="center"
+                        horizontalalignment="left"
+                        fontsize="15"
+                        (tap) = "see()">
+                </Label>
+                <Image
+                        src="~/images/share.png"
+                        row="0"
+                        col="2"
+                        style="width: 33px; height: 33px;"
+                        horizontalalignment="right"
+                        (tap)="shareProfile()">
+                </Image>
+            </GridLayout>
+            <GridLayout
+                    row="1"
+                    col="0">
+                <Image
+                        row="1"
+                        col="2"
+                        [src] = "profile.imageProfile"
+                        horizontalalignment="center"
+                        style="height: 1000px; width: 1000px;"
+                        (tap) = "see()"
+                        >
+                </Image>
+            </GridLayout>
+        </GridLayout>
+    </StackLayout>
+</ScrollView>
